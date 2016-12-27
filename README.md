@@ -5,6 +5,16 @@
 $ npm install express-results
 ```
 
+###Usage
+```javascript
+let results = require('express-results');
+
+app.use(results());
+app.use(function(req, res, next) {
+  res.ok('hello world');
+})
+```
+
 ###API
 ####.ok(content)
 Generates a 200 OK result.
