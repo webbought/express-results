@@ -7,7 +7,10 @@ $ npm install express-results
 
 ###Usage
 ```javascript
+let express = require('express');
 let results = require('express-results');
+
+let app = express();
 
 app.use(results());
 app.use(function(req, res, next) {
@@ -16,9 +19,10 @@ app.use(function(req, res, next) {
 ```
 equal to 
 ```javascript
-let results = require('express-results');
+let express = require('express');
 
-app.use(results());
+let app = express();
+
 app.use(function(req, res, next) {
   res.status(200);
   res.send('hello world');
