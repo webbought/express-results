@@ -49,7 +49,6 @@ function _result(name) {
     if (name == 'movedPermanently') {
       this.redirect(301, content);
     } else if (name == 'moveTemporarily') {
-      this.status(302);
       this.redirect(content);
     } else {
       this.send(_body.call(this, content));
