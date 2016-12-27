@@ -1,0 +1,26 @@
+{
+  "name": "express-results",
+  "version": "1.0.0",
+  "description": "express results middleware.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbought/express-results.git"
+  },
+  "keywords": [
+    "express.js",
+    "result"
+  ],
+  "author": "krew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webbought/express-results/issues"
+  },
+  "homepage": "https://github.com/webbought/express-results#readme"
+}
