@@ -27,25 +27,28 @@ function Results() {
 
 function _result(name) {
   return function(content) {
+    let statusCode;
     switch(name) {
-      case 'ok' : this.status(200);
+      case 'ok' : statusCode = 200;
         break;
-      case 'created' : this.status(201);
+      case 'created' : statusCode = 201;
         break;
-      case 'noContent' :this.status(204);
+      case 'noContent' : statusCode = 204;
         break;
-      case 'badRequest' : this.status(400);
+      case 'badRequest' : statusCode = 400;
         break;
-      case 'unauthorized' : this.status(401);
+      case 'unauthorized' : statusCode = 401;
         break;
-      case 'forbidden' : this.status(403);
+      case 'forbidden' : statusCode = 403;
         break;
-      case 'notFound' : this.status(404);
+      case 'notFound' : statusCode = 404;
         break;
-      case 'internalServerError' : this.status(500);
+      case 'internalServerError' : statusCode = 500;
         break;
-      default : this.status(200);
+      default : statusCode = 200;
     }
+    this.status(statusCode);
+    
     if (name == 'movedPermanently') {
       this.redirect(301, content);
     } else if (name == 'moveTemporarily') {
