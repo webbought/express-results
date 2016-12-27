@@ -34,10 +34,6 @@ function _result(name) {
         break;
       case 'noContent' :this.status(204);
         break;
-      case 'movedPermanently' : this.status(301);
-        break;
-      case 'moveTemporarily' : this.status(302);
-        break;
       case 'badRequest' : this.status(400);
         break;
       case 'unauthorized' : this.status(401);
@@ -50,7 +46,14 @@ function _result(name) {
         break;
       default : this.status(200);
     }
-    this.send(_body.call(this, content));
+    if (name == 'movedPermanently') {
+      this.redirect(301, content);
+    } else if (name == 'moveTemporarily') {
+      this.status(302);
+      this.redirect(content);
+    } else {
+      this.send(_body.call(this, content));
+    }
   }
 }
 
