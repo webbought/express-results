@@ -14,6 +14,16 @@ app.use(function(req, res, next) {
   res.ok('hello world');
 })
 ```
+equal to 
+```javascript
+let results = require('express-results');
+
+app.use(results());
+app.use(function(req, res, next) {
+  res.status(200);
+  res.send('hello world');
+})
+```
 
 ###API
 ####.ok(content)
