@@ -47,13 +47,13 @@ function _result(name) {
         break;
       default : statusCode = 200;
     }
-    this.status(statusCode);
     
     if (name == 'movedPermanently') {
       this.redirect(301, content);
     } else if (name == 'moveTemporarily') {
       this.redirect(content);
     } else {
+      this.status(statusCode);
       this.send(_body.call(this, content));
     }
   }
