@@ -1,6 +1,6 @@
 {
   "name": "express-results",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "express results middleware.",
   "main": "index.js",
   "directories": {
@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/webbought/express-results/issues"
   },
-  "homepage": "https://github.com/webbought/express-results#readme"
+  "homepage": "https://github.com/webbought/express-results#readme",
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  }
 }
