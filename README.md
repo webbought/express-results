@@ -1,11 +1,11 @@
-##Express Results
+## Express Results
 
-###Installation
+### Installation
 ```shell
 $ npm install express-results
 ```
 
-###Usage
+### Usage
 ```javascript
 let express = require('express');
 let results = require('express-results');
@@ -29,34 +29,34 @@ app.use(function(req, res, next) {
 })
 ```
 
-###API
-####.ok(content)
+### API
+#### .ok(content)
 Generates a 200 OK result.
 
-#####.created(content)
+##### .created(content)
 Generates a 201 Created result.
 
-#####.noContent()
+##### .noContent()
 Generates a 204 No Content result.
 
-#####.movedPermanently(url)
+##### .movedPermanently(url)
 Generates a 301 Moved Permanently result.
 
-#####.moveTemporarily(url)
+##### .moveTemporarily(url)
 Generates a 302 Move Temporarily result.
 
-#####.badRequest(content)
+##### .badRequest(content)
 Generates a 400 Bad Request result.
 
-#####.forbidden(content)
+##### .forbidden(content)
 Generates a 403 Forbidden result.
 
-#####.unauthorized(content)
+##### .unauthorized(content)
 Generates a 401 Unauthorized result.
 
-#####.notFound(content)
+##### .notFound(content)
 Generates a 404 Not Found result.
 
-#####.internalServerError(content)
+##### .internalServerError(content)
 Generates a 500 Internal Server Error result.
 
